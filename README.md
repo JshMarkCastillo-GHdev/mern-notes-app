@@ -47,16 +47,16 @@ http://localhost:5001
 
 ## 📡 API Endpoints
 
-GET /notes
-GET /notes/:id
-DELETE /notes/:id
-POST /notes body example:
+- GET /notes
+- GET /notes/:id
+- DELETE /notes/:id
+- POST /notes body example:
 {
   "title": "My Note",
   "content": "This is a test note"
 }
 
-PUT /notes/:id body example:
+- PUT /notes/:id body example:
 {
   "title": "My Note",
   "content": "This is a test note"
