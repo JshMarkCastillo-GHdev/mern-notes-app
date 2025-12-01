@@ -1,8 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import RateLimitedUI from "../components/RateLimitedUI";
 import NoteCard from "../components/NoteCard";
-import { useEffect } from "react";
 import api from "../lib/axios";
 import toast from "react-hot-toast";
 import NotesNotFound from "../components/NotesNotFound";
@@ -16,7 +15,6 @@ const HomePage = () => {
     const fetchNotes = async () => {
       try {
         const res = await api.get("/notes");
-        console.log(res.data);
         setNotes(res.data);
         setIsRateLimited(false);
       } catch (error) {
@@ -33,6 +31,7 @@ const HomePage = () => {
 
     fetchNotes();
   }, []);
+
   return (
     <div className="min-h-screen">
       <Navbar />
