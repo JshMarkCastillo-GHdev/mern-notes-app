@@ -22,7 +22,7 @@ const NoteDetailPage = () => {
         setNote(res.data);
         setIsRateLimited(false);
       } catch (error) {
-        console.error("Error fetching note", error);
+        // console.error("Error fetching note", error);
         if (error.response.status === 429) {
           setIsRateLimited(true);
         } else {

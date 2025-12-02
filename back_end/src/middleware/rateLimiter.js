@@ -5,9 +5,7 @@ const rateLimiter = async (req, res, next) => {
     const { success } = await rateLimit.limit("my-limit-key");
 
     if (!success) {
-      return res.status(429).json({
-        message: "Too many Requests, please try again.",
-      });
+      return res.status(429).send();
     }
 
     next(); // Don't forget this to activate the rate limiit, else it will load endlessly
