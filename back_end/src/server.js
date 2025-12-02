@@ -24,9 +24,9 @@ if (process.env.NODE_ENV !== "production") {
 }
 // call this before running express and rate limiter in order for the front-end to respond beforehand
 app.use(express.json()); // So we can read the JSON
-app.use(rateLimiter);
+//app.use(rateLimiter);
 
-app.use("/api/notes", notesRoutes);
+app.use("/api/notes", rateLimiter, notesRoutes);
 
 // For deplmnt
 if (process.env.NODE_ENV === "production") {
