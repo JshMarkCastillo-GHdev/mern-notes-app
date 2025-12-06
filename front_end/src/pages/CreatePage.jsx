@@ -4,7 +4,7 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router";
 
-const HomePage = () => {
+const CreatePage = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [loading, setLoading] = useState(false);
@@ -102,4 +102,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default CreatePage;
