@@ -64,6 +64,7 @@ const CreatePage = () => {
                     <span className="label-text">Title</span>
                   </label>
                   <input
+                    autoFocus
                     type="text"
                     placeholder="Note Title"
                     className="input input-bordered"
